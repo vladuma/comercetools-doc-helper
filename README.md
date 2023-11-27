@@ -45,3 +45,9 @@ Example:
 ```
 
 Retruns an answer to your question based on ChatGPT-4 analysis of CT docs related to the query.
+
+# Manage database
+You can re-parse the documentation using the `doc_parser.py` script in the `database` folder. Run it with `python3 ./database/doc_parser.py`, make sure you have Python and necessary dependensies installed locally. 
+Th script will add records to the database.
+You can erase all data by deleting `/database/data/` directory.
+Tou can connect to the database using the credentials in `docker-compose.yml` file.
