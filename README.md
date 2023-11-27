@@ -5,7 +5,7 @@ There is a Python backend app with routes to perform search on the database.
 Frontend is a simple React app that uses backend API to answer questions about Commercetools.
 
 # Setup
-## 1. Prerequsits 
+## 1. Prerequisits 
 Create `.env` file (use `.env-sample` and an example), add your OpenAI API key to the file.
 
 ## 2. Run
@@ -49,7 +49,31 @@ Example:
 Retruns an answer to your question based on ChatGPT-4 analysis of CT docs related to the query.
 
 # Manage database
-You can re-parse the documentation using the `doc_parser.py` script in the `database` folder. Run it with `python3 ./database/doc_parser.py`, make sure you have Python and necessary dependensies installed locally. 
-Th script will add records to the database.
-You can erase all data by deleting `/database/data/` directory.
-Tou can connect to the database using the credentials in `docker-compose.yml` file.
+- You can re-parse the documentation using the `doc_parser.py` script in the `database` folder. Run it with `python3 ./database/doc_parser.py`, make sure you have Python and necessary dependensies installed locally. 
+- The script will add records to the database.
+- You can erase all data by deleting `/database/data/` directory.
+- When trying to run the app you may see a database error (`pg_notify is not found`), this can happen because git failed to create empty directory. You can fix the issue by creating the missing directory manualy. Here is a list of all contents of `/database/data/`:
+    - PG_VERSION
+    - pg_dynshmem
+    - pg_multixact
+    - pg_snapshots
+    - pg_tblspc
+    - postgresql.auto.con
+    - base
+    - pg_hba.conf
+    - pg_notify
+    - pg_stat
+    - pg_twophase
+    - postgresql.con
+    - global
+    - pg_ident.conf
+    - pg_replslot
+    - pg_stat_tmp
+    - pg_wal
+    - postmaster.opt
+    - pg_commit_ts
+    - pg_logical
+    - pg_serial
+    - pg_subtrans
+    - pg_xac
+- You can connect to the database using the credentials in `docker-compose.yml` file.
