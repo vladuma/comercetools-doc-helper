@@ -5,13 +5,15 @@ There is a Python backend app with routes to perform search on the database.
 Frontend is a simple React app that uses backend API to answer questions about Commercetools.
 
 # Setup
-## 1. Create `.env` file (use `.env-sample` and an example), add your OpenAI API key to the file.
+## 1. Prerequsits 
+Create `.env` file (use `.env-sample` and an example), add your OpenAI API key to the file.
 
-## 2. Run `docker compose up --build` (make sure Docker is installed and running)
+## 2. Run
+Use `docker compose up --build` to run the app (make sure Docker is installed and running)
 
 ## 3. The app
-a. frontend is served at `localhost:3000`
-b. API is served at `localhost:80`
+- a. frontend is served at `localhost:3000`
+- b. API is served at `localhost:80`
 
 # The API 
 Consists of 2 routes: `/search` & `/ask`
